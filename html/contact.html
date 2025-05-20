@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="contact">
+    
+    <header>
+        <div class="logo">
+            <img src="../pic/white1.png" alt="Logo" width="50">
+            <h1 data-en="United Nations Organisation" data-sv="Förenta Nationerna Organisation" data-ru="Организация Объединенных Наций">
+                United Nations Organisation
+            </h1>
+        </div>
+        <nav aria-label="Huvudnavigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+            <button id="language-button-sv" class="language-button" aria-label="Swedish Language Option" data-en="Swedish" data-sv="Svenska" data-ru="Шведский">Svenska</button>
+            <button id="language-button-en" class="language-button" aria-label="English Language Option" data-en="English" data-sv="Engelska" data-ru="Английский">English</button>
+            <button id="language-button-ru" class="language-button" aria-label="Russian Language Option" data-en="Russian" data-sv="Ryska" data-ru="Русский">Русский</button>
+        </nav>
+    </header>
+   
+    <main>
+        <section id="contact" class="page active">
+            <h2 data-en="Contact Us" data-sv="Kontakta Oss" data-ru="Свяжитесь с нами">
+                <img src="../pic/un-logo.png" alt="UN Logo" width="50" style="vertical-align: middle; margin-right: 10px;">
+                Contact Us
+            </h2>
+            <p data-en="If you have any questions or would like to get in touch, please use the contact form below." data-sv="Om du har några frågor eller vill komma i kontakt, vänligen använd kontaktformuläret nedan." data-ru="Если у вас есть вопросы или вы хотите связаться с нами, пожалуйста, используйте контактную форму ниже.">If you have any questions or would like to get in touch, please use the contact form below.</p>
+            <form>
+                <label for="name" data-en="Name:" data-sv="Namn:" data-ru="Имя:">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email" data-en="Email:" data-sv="E-post:" data-ru="Электронная почта:">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message" data-en="Message:" data-sv="Meddelande:" data-ru="Сообщение:">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit" data-en="Send" data-sv="Skicka" data-ru="Отправить">Send</button>
+            </form>
+            <p data-en="You can also reach us at:" data-sv="Du kan också nå oss på:" data-ru="Вы также можете связаться с нами по:"><strong>You can also reach us at:</strong></p>
+            <div class="contact-info">
+                <ul>
+                    <li data-en="Email: info@minwebbplats.com" data-sv="E-post: info@minwebbplats.com" data-ru="Электронная почта: info@minwebbplats.com">
+                        <strong>Email:</strong> info@minwebbplats.com
+                    </li>
+                    <li data-en="Phone: +46 123 456 789" data-sv="Telefon: +46 123 456 789" data-ru="Телефон: +46 123 456 789">
+                        <strong>Phone:</strong> +46 123 456 789
+                    </li>
+                    <li data-en="Address: 123 Main Street, Stockholm, Sweden" data-sv="Adress: 123 Main Street, Stockholm, Sverige" data-ru="Адрес: 123 Main Street, Стокгольм, Швеция">
+                        <strong>Address:</strong> 123 Main Street, Stockholm, Sweden
+                    </li>
+                </ul>
+            </div>
+            <p data-en="Follow us on social media:" data-sv="Följ oss på sociala medier:" data-ru="Следите за нами в социальных сетях:"><strong>Follow us on social media:</strong></p>
+            <div class="social-media">
+                <ul>
+                    <li><a href="https://www.facebook.com/unitednations" data-en="Facebook" data-sv="Facebook" data-ru="Facebook">Facebook</a></li>
+                    <li><a href="https://twitter.com/UN" data-en="Twitter" data-sv="Twitter" data-ru="Twitter">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/unitednations" data-en="Instagram" data-sv="Instagram" data-ru="Instagram">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/united-nations" data-en="LinkedIn" data-sv="LinkedIn" data-ru="LinkedIn">LinkedIn</a></li>
+                    <li><a href="https://www.youtube.com/user/unitednations" data-en="YouTube" data-sv="YouTube" data-ru="YouTube">YouTube</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>&copy; 2025 Min Webbplats</strong></p>
+    </footer>
+
+    <script src="../js/language-switcher.js"></script>
+</body>
+</html>
