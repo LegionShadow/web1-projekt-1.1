@@ -1,120 +1,244 @@
+/* Global CSS Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html:lang(en),
-html:lang(sv) {
-    font-family: 'Montserrat', sans-serif;
-}
-html:lang(ru) {
-    font-family: 'PT Sans', sans-serif;
+/* CSS Variables */
+:root {
+    --primary-color: #009EDB;
+    --secondary-color: aqua;
+    --background-light: #f0f4f8;
+    --background-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --font-family: 'Montserrat', sans-serif;
+    --spacing: 1rem;
+    --border-radius: 10px;
+    --transition: 0.3s ease;
 }
 
+/* Dark Mode */
 body {
-    font-family: Arial, sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    font-family: var(--font-family);
     line-height: 1.6;
-    padding-bottom: 60px;
-    background-color: #009EDB; 
+    transition: background-color var(--transition), color var(--transition);
+}
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-light);
 }
 
-body.home {
-    background: url("../pic/Home.jpg") center/cover no-repeat;
-    transition: background 0.3s ease;
-}
-body.contact {
-    background: url("../pic/ContactImage.png") center/cover no-repeat;
-    transition: background 0.3s ease;
-}
-body.about {
-    background: url("../pic/AboutImage.png") center/cover no-repeat;
-    padding: 20px;
-}
-
+/* Completely New Navbar Design */
 header {
-    background-color: #009EDB;
-    color: white;
-    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    transition: background-color var(--transition), box-shadow var(--transition);
+}
+header.scrolled {
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--text-light);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-header .logo {
-    display: flex;
-    align-items: center;
+/* Navbar Animation */
+header {
+    transition: transform 0.3s ease-in-out, background-color var(--transition);
+    will-change: transform;
 }
-
-header .logo img {
-    width: 50px;
-    margin-right: 10px;
+header.hidden {
+    transform: translateY(-100%);
+}
+header.visible {
+    transform: translateY(0);
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex: 1;
 }
 nav ul {
-    list-style: none;
     display: flex;
+    gap: 2rem;
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
 nav ul li {
-    margin: 0 15px;
+    margin: 0;
+    position: relative;
 }
-nav a, .language-button {
-    color: white;
+nav a {
+    color: var(--text-light);
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: color var(--transition), transform var(--transition);
+    position: relative;
 }
-nav a:hover, .language-button:hover {
-    color: #ffdd57;
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width var(--transition);
+}
+nav a:hover::after {
+    width: 100%;
+}
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+.language-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 .language-button {
-    background: transparent;
-    padding: 5px 10px;
-    border: 2px solid white;
-    border-radius: 5px;
-    margin-left: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-size: 0.9rem;
     cursor: pointer;
+    color: var(--text-dark);
+    transition: background-color var(--transition), transform var(--transition);
+}
+.language-button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    transform: scale(1.1);
 }
 
-main, aside, section {
-    padding: 30px;
-    margin: 20px auto;
-    width: 80%;
+/* Adjusted Navbar Left Section */
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
+header .logo img {
+    width: 30px;
+    height: auto;
+}
+header .logo h1 {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+/* Redesigned Main and Section Styling with Creative Layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem;
+    background: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+main:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
 section {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    border: 1px solid #ddd;
-    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition), box-shadow var(--transition);
 }
-section h1, section h2, #projects h2, .project h3 {
-    font-size: 1.5em;
-}
-section h2 {
-    margin-bottom: 15px;
-    font-size: 1.8em;
-    color: #009EDB;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-section p, section ul, #projects p, .project p {
-    font-size: 1.2em;
-    color: black;
-    margin-bottom: 15px;
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 158, 219, 0.1), transparent);
+    z-index: 0;
+    transition: opacity var(--transition);
+}
+section:hover::before {
+    opacity: 0.5;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: relative;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    z-index: 1;
+    position: relative;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1;
+    position: relative;
+}
+
+section ul li {
+    font-size: 1rem;
+    color: var(--text-dark);
+    background: rgba(0, 158, 219, 0.1);
+    padding: 0.8rem 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition);
+}
+section ul li:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Forms */
 form {
     display: flex;
     flex-direction: column;
+    gap: var(--spacing);
 }
 form label {
     margin-bottom: 10px;
@@ -122,28 +246,58 @@ form label {
     color: #009EDB;
 }
 form input, form textarea {
-    margin-bottom: 15px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 1.1em;
-    background-color: rgba(255, 255, 255, 0.95);
+    padding: var(--spacing);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
 }
-form button {
-    padding: 15px 30px;
-    background-color: #009EDB;
-    color: white;
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+/* Buttons */
+button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
     border: none;
-    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
     cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color var(--transition), transform var(--transition);
 }
-form button:hover {
-    background-color: #009EDB;
+button:hover {
+    background-color: var(--secondary-color);
     transform: scale(1.05);
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Parallax Effect */
+body.home {
+    background: url("../pic/HomeUN.jpg") center/cover no-repeat fixed;
+}
+
+body.about {
+    background: url("../pic/United\ Nations\ Flag\ 2\ Pack\ –\ Grunge\ and\ Retro.jpg") center/cover no-repeat fixed;
+}
+
+body.contact {
+    background: url("../pic/Home.jpg") center/cover no-repeat fixed;
+
+}
+
+/* Contact and Social Media */
 .contact-info, .social-media {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
@@ -171,6 +325,7 @@ form button:hover {
     color: #ffdd57;
 }
 
+/* Projects */
 .projects-container {
     display: flex;
     justify-content: space-between;
@@ -187,6 +342,7 @@ form button:hover {
     color: #009EDB;
 }
 
+/* Sidebar */
 .sidebar {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -209,6 +365,7 @@ form button:hover {
     color: white;
 }
 
+/* Footer */
 footer {
     background-color: #009EDB;
     color: white;
@@ -223,34 +380,55 @@ footer p {
     font-size: 0.9em;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
     header {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        padding: 1rem;
     }
-    section {
-        padding: 15px;
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: left;
     }
     .projects-container {
         flex-direction: column;
     }
-    body.home, body.contact {
-        background-size: contain;
+    .language-buttons {
+        margin-top: 1rem;
+        justify-content: flex-start;
+    }
+    header .logo {
+        justify-content: flex-start;
+    }
+    header .logo h1 {
+        font-size: 0.9rem;
+    }
+    header {
+        padding: 0.5rem;
     }
 }
-
 @media (max-width: 480px) {
-    header, footer {
-        padding: 15px 0;
+    header {
+        padding: 0.5rem;
     }
-    main {
-        padding: 15px;
+    nav ul {
+        gap: 0.5rem;
+    }
+    nav a {
+        padding: 0.5rem;
+    }
+    .language-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }

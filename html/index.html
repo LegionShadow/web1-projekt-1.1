@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title data-en="My Website" data-sv="Min Webbplats" data-ru="Мой Вебсайт">Min Webbplats</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="home">
+
+    <header>
+        <div class="logo">
+            <img src="../pic/white1.png" alt="Logo" width="50">
+            <h1 data-en="United Nations Organisation" data-sv="Förenta Nationerna Organisation" data-ru="Организация Объединенных Наций">United Nations Organisation</h1>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#This-is-start-Page" aria-current="page" data-en="Home" data-sv="Hem" data-ru="Главная" onclick="resetLanguage()">Home</a></li>
+                <li><a href="about.html" data-en="About" data-sv="Om" data-ru="О нас">About</a></li>
+                <li><a href="contact.html" data-en="Contact" data-sv="Kontakt" data-ru="Контакт">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="language-buttons">
+            <button id="language-button-sv" class="language-button" aria-label="Swedish Language Option" data-en="Swedish" data-sv="Svenska" data-ru="Шведский">Svenska</button>
+            <button id="language-button-en" class="language-button" aria-label="English Language Option" data-en="English" data-sv="Engelska" data-ru="Английский">English</button>
+            <button id="language-button-ru" class="language-button" aria-label="Russian Language Option" data-en="Russian" data-sv="Ryska" data-ru="Русский">Русский</button>
+        </div>
+    </header>
+   
+    <main>
+        <section id="This-is-start-Page" class="page active box-shadow">
+            <div class="logo-image">
+                <img src="../pic/un-logo.png" alt="Logo" width="160">
+            </div>
+            <h2 data-en="This is the start page." data-sv="Detta är startsidan." data-ru="Это стартовая страница.">This is the start page.</h2>
+            <p data-en="Welcome to our website. Here you will find information about our mission and activities." data-sv="Välkommen till vår webbplats. Här hittar du information om vårt uppdrag och våra aktiviteter." data-ru="Добро пожаловать на наш сайт. Здесь вы найдете информацию о нашей миссии и деятельности.">Welcome to our website. Here you will find information about our mission and activities.</p>    
+            <p data-en="We are dedicated to making the world a better place through our various initiatives and programs." data-sv="Vi är dedikerade till att göra världen till en bättre plats genom våra olika initiativ och program." data-ru="Мы стремимся сделать мир лучше через наши различные инициативы и программы.">We are dedicated to making the world a better place through our various initiatives and programs.</p>
+            <p data-en="Our organization focuses on several key areas. We believe in the power of collaboration and work with various partners to achieve our goals." data-sv="Vår organisation fokuserar på flera nyckelområden. Vi tror på kraften i samarbete och arbetar med olika partners för att uppnå våra mål." data-ru="Наша организация сосредоточена на нескольких ключевых областях. Мы верим в силу сотрудничества и работаем с различными партнерами для достижения наших целей.">Our organization focuses on several key areas. We believe in the power of collaboration and work with various partners to achieve our goals.</p>
+        </section>
+        
+        <section id="Our-Missions" class="page box-shadow">
+            <h2 data-en="Our Mission" data-sv="Vårt Uppdrag" data-ru="Наша миссия">Our Mission</h2>
+            <p data-en="We aim to promote peace and security, foster sustainable development, and protect human rights around the world." data-sv="Vi strävar efter att främja fred och säkerhet, främja hållbar utveckling och skydda mänskliga rättigheter runt om i världen." data-ru="Мы стремимся продвигать мир и безопасность, способствовать устойчивому развитию и защищать права человека по всему миру.">We aim to promote peace and security, foster sustainable development, and protect human rights around the world.</p>
+            <p data-en="Our mission is guided by the following principles:" data-sv="Vårt uppdrag styrs av följande principer:" data-ru="Наша миссия руководствуется следующими принципами:">Our mission is guided by the following principles:</p>
+            <ul>
+                <li data-en="Respect for human dignity" data-sv="Respekt för människans värdighet" data-ru="Уважение человеческого достоинства">Respect for human dignity</li>
+                <li data-en="Commitment to justice and equality" data-sv="Engagemang för rättvisa och jämlikhet" data-ru="Приверженность справедливости и равенству">Commitment to justice and equality</li>
+                <li data-en="Dedication to transparency and accountability" data-sv="Engagemang för transparens och ansvarsskyldighet" data-ru="Приверженность прозрачности и подотчетности">Dedication to transparency and accountability</li>
+            </ul>
+            <p data-en="We work tirelessly to create a better future for all, and we invite you to join us in our efforts." data-sv="Vi arbetar outtröttligt för att skapa en bättre framtid för alla, och vi inbjuder dig att delta i våra ansträngningar." data-ru="Мы неустанно работаем над созданием лучшего будущего для всех и приглашаем вас присоединиться к нашим усилиям.">We work tirelessly to create a better future for all, and we invite you to join us in our efforts.</p>
+        </section>
+        
+        <section id="Latest-News" class="page box-shadow">
+            <h2 data-en="Latest-News" data-sv="Senaste Nytt" data-ru="Последние новости">Latest News</h2>
+            <p data-en="Stay updated with the latest news and events from our organization." data-sv="Håll dig uppdaterad med de senaste nyheterna och evenemangen från vår organisation." data-ru="Будьте в курсе последних новостей и событий нашей организации.">Stay updated with the latest news and events from our organization.</p>
+            <p data-en="We regularly publish updates on our activities, achievements, and upcoming events." data-sv="Vi publicerar regelbundet uppdateringar om våra aktiviteter, prestationer och kommande evenemang." data-ru="Мы регулярно публикуем обновления о нашей деятельности, достижениях и предстоящих событиях.">We regularly publish updates on our activities, achievements, and upcoming events.</p>
+            <p data-en="For more information, visit our" data-sv="För mer information, besök vår" data-ru="Для получения дополнительной информации посетите наш">For more information, visit our <a href="https://www.un.org/en/">official website</a>.</p>
+        </section>
+
+        <section id="projects" class="page box-shadow">
+            
+            <h2 data-en="Our Projects" data-sv="Våra Projekt" data-ru="Наши проекты">Our Projects</h2>
+            <p data-en="We have several ongoing projects aimed at improving lives and communities." data-sv="Vi har flera pågående projekt som syftar till att förbättra liv och samhällen." data-ru="У нас есть несколько текущих проектов, направленных на улучшение жизни и сообществ.">We have several ongoing projects aimed at improving lives and communities.</p>
+           
+            <div class="projects-container">
+                
+                <div class="project">
+                    <h3 data-en="Project A: Education for All" data-sv="Projekt A: Utbildning för Alla" data-ru="Проект А: Образование для всех">Project A: Education for All</h3>
+                    <p data-en="Our Education for All project aims to provide quality education to children in underserved communities. We build schools, train teachers, and provide learning materials to ensure every child has the opportunity to learn." data-sv="Vårt projekt Utbildning för Alla syftar till att ge kvalitetsutbildning till barn i underprivilegierade samhällen. Vi bygger skolor, utbildar lärare och tillhandahåller läromedel för att säkerställa att varje barn har möjlighet att lära sig." data-ru="Наш проект Образование для всех направлен на предоставление качественного образования детям в неблагополучных сообществах. Мы строим школы, обучаем учителей и предоставляем учебные материалы, чтобы каждый ребенок имел возможность учиться.">Our Education for All project aims to provide quality education to children in underserved communities. We build schools, train teachers, and provide learning materials to ensure every child has the opportunity to learn.</p>
+                    <p data-en="We also offer scholarships to students who excel academically but lack the financial resources to continue their education." data-sv="Vi erbjuder också stipendier till studenter som utmärker sig akademiskt men saknar ekonomiska resurser för att fortsätta sin utbildning." data-ru="Мы также предлагаем стипендии студентам, которые хорошо учатся, но не имеют финансовых ресурсов для продолжения образования.">We also offer scholarships to students who excel academically but lack the financial resources to continue their education.</p>
+                    <p data-en="Additionally, we are working with local volunteers to provide tutoring services, supporting students in their academic pursuits."
+                       data-sv="Dessutom samarbetar vi med lokala volontärer för att erbjuda läxhjälp och stötta elever i deras studier."
+                       data-ru="Кроме того, мы сотрудничаем с местными волонтерами, чтобы обеспечить детям репетиторскую помощь в их учебных начинаниях.">
+                        Additionally, we are working with local volunteers to provide tutoring services, supporting students in their academic pursuits.
+                    </p>
+                </div>
+                
+                <div class="project">
+                    <h3 data-en="Project B: Clean Water Initiative" data-sv="Projekt B: Rent Vatten Initiativ" data-ru="Проект Б: Инициатива чистой воды">Project B: Clean Water Initiative</h3>
+                    <p data-en="The Clean Water Initiative focuses on providing access to safe and clean drinking water. We install water purification systems, dig wells, and educate communities on water conservation and hygiene practices." data-sv="Initiativet Rent Vatten fokuserar på att ge tillgång till säkert och rent dricksvatten. Vi installerar vattenreningssystem, gräver brunnar och utbildar samhällen om vattenbevarande och hygienpraxis." data-ru="Инициатива чистой воды направлена на обеспечение доступа к безопасной и чистой питьевой воде. Мы устанавливаем системы очистки воды, роем колодцы и обучаем сообщества методам сохранения воды и гигиеническим практикам.">The Clean Water Initiative focuses on providing access to safe and clean drinking water. We install water purification systems, dig wells, and educate communities on water conservation and hygiene practices.</p>
+                    <p data-en="In addition, we work with local governments to develop sustainable water management policies." data-sv="Dessutom arbetar vi med lokala myndigheter för att utveckla hållbara vattenförvaltningspolicyer." data-ru="Кроме того, мы работаем с местными властями над разработкой устойчивых политик управления водными ресурсами.">In addition, we work with local governments to develop sustainable water management policies.</p>
+                    <p data-en="We also promote water conservation campaigns and workshops to raise awareness on responsible water usage."
+                       data-sv="Vi främjar också kampanjer och workshops för att bevara vatten och öka medvetenheten kring ansvarsfull vattenanvändning."
+                       data-ru="Мы также проводим кампании и семинары по сохранению воды, чтобы повысить информированность об ответственном использовании водных ресурсов.">
+                        We also promote water conservation campaigns and workshops to raise awareness on responsible water usage.
+                    </p>
+                </div>
+               
+                <div class="project">
+                    <h3 data-en="Project C: Health and Wellness" data-sv="Projekt C: Hälsa och Välbefinnande" data-ru="Проект С: Здоровье и благополучие">Project C: Health and Wellness</h3>
+                    <p data-en="Our Health and Wellness project aims to improve the overall health of communities. We provide medical supplies, run health camps, and promote healthy living through various awareness programs." data-sv="Vårt projekt Hälsa och Välbefinnande syftar till att förbättra den allmänna hälsan i samhällen. Vi tillhandahåller medicinska förnödenheter, driver hälsoläger och främjar hälsosamt liv genom olika medvetenhetsprogram." data-ru="Наш проект Здоровье и благополучие направлен на улучшение общего состояния здоровья сообществ. Мы предоставляем медицинские принадлежности, проводим оздоровительные лагеря и продвигаем здоровый образ жизни через различные программы повышения осведомленности.">Our Health and Wellness project aims to improve the overall health of communities. We provide medical supplies, run health camps, and promote healthy living through various awareness programs.</p>
+                    <p data-en="We also collaborate with local healthcare providers to offer free medical check-ups and vaccinations." data-sv="Vi samarbetar också med lokala vårdgivare för att erbjuda gratis medicinska kontroller och vaccinationer." data-ru="Мы также сотрудничаем с местными поставщиками медицинских услуг, чтобы предлагать бесплатные медицинские осмотры и вакцинации.">We also collaborate with local healthcare providers to offer free medical check-ups and vaccinations.</p>
+                    <p data-en="Furthermore, a mobile clinic is being tested to reach remote communities, bringing vital healthcare services where they are needed most."
+                       data-sv="Dessutom testas en mobil klinik för att nå avlägsna samhällen och erbjuda nödvändig sjukvård där den behövs som mest."
+                       data-ru="Кроме того, мы тестируем мобильную клинику, чтобы охватить отдаленные районы и предоставить необходимые медицинские услуги там, где они нужнее всего.">
+                        Furthermore, a mobile clinic is being tested to reach remote communities, bringing vital healthcare services where they are needed most.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <h2 data-en="Sidebar" data-sv="Sidofält" data-ru="Боковая панель">Sidebar</h2>
+            <p data-en="This is a sidebar with additional information and links." data-sv="Detta är ett sidofält med ytterligare information och länkar." data-ru="Это боковая панель с дополнительной информацией и ссылками.">This is a sidebar with additional information and links.</p>
+            <ul>
+                <li><a href="https://www.un.org/en/sections/what-we-do/" data-en="What We Do" data-sv="Vad Vi Gör" data-ru="Что мы делаем">What We Do</a></li>
+                <li><a href="https://www.un.org/en/sections/where-we-work/" data-en="Where We Work" data-sv="Var Vi Arbetar" data-ru="Где мы работаем">Where We Work</a></li>
+                <li><a href="https://www.un.org/en/sections/how-we-work/" data-en="How We Work" data-sv="Hur Vi Arbetar" data-ru="Как мы работаем">How We Work</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p><strong>&copy; <span id="year"></span> <span data-en="My Website" data-sv="Min Webbplats" data-ru="Мой Вебсайт">Min Webbplats</span></strong></p>
+    </footer>
+  
+    <script src="../js/language-switcher.js"></script>
+</body>
+</html>
